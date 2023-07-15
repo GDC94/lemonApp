@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import image from "../../assets/lemoncapture.png";
+import image from "../../assets/lemonCapture.png";
 import ButtonCustom from "../../components/commons/buttonCustom/buttonCustom";
 
 import {
