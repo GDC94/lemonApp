@@ -1,12 +1,12 @@
-import { View } from "react-native";
-import { styles } from "./homeScreenStyles";
-import CardsCoinsList from "../../components/cardsCoin/cardsCoin";
+import React, { FunctionComponent } from "react";
+import { HomeContainer } from "./homeScreen.styles";
+import { StatusBar } from "expo-status-bar";
 
-const HomeScreen = () => {
+const HomeScreen: FunctionComponent = () => {
   return (
-    <View style={styles.container}>
-      <CardsCoinsList />
-    </View>
+    <HomeContainer>
+      <StatusBar style="light" />
+    </HomeContainer>
   );
 };
 
