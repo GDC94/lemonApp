@@ -5,6 +5,9 @@ import { WelcomeScreen } from "../src/screens/welcomeScreen";
 import { HomeScreen } from "../src/screens/homeScreen";
 import { colors } from "../src/components/commons/colors";
 
+import lemmy from "../src/assets/lemmy.png";
+import { Greeting, Profile } from "../src/components/header";
+
 type RootStackParamsList = {
   WelcomeScreen: JSX.Element;
   HomeScreen: JSX.Element;
@@ -23,9 +26,17 @@ const RootStackNavigator: FunctionComponent = ({}) => {
             shadowColor: "transparent",
             shadowOpacity: 0,
             elevation: 0,
-            height: 120,
+            height: 140,
           },
-          headerTintColor: colors.green,
+          headerRightContainerStyle: {
+            paddingRight: 25,
+          },
+          headerLeftContainerStyle: {
+            paddingLeft: 25,
+          },
+          headerRight: () => (
+            <Profile imageSource={lemmy} imgStyle={undefined} />
+          ),
         }}
         initialRouteName="HomeScreen"
       >
@@ -38,7 +49,12 @@ const RootStackNavigator: FunctionComponent = ({}) => {
         <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
-          options={{ headerShown: false }}
+          options={{
+            headerTitle: () => <></>,
+            headerLeft: () => (
+              <Greeting mainText={"Hola German"}  subText={"$gderbes"} />
+            ),
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

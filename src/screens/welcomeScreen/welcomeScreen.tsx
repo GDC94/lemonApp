@@ -23,6 +23,7 @@ const WelcomeScreen = () => {
               color: "white",
               fontSize: 22,
               fontFamily: "Nunito_700Bold",
+              textAlign: "center",
             }}
             btnStyles={{
               marginBottom: 50,
