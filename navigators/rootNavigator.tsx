@@ -4,9 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { WelcomeScreen } from "../src/screens/welcomeScreen";
 import { HomeScreen } from "../src/screens/homeScreen";
 import { colors } from "../src/components/commons/colors";
-
-import lemmy from "../src/assets/lemmy.png";
 import { Greeting, Profile } from "../src/components/header";
+import lemmy from "../src/assets/lemmy.png";
 
 type RootStackParamsList = {
   WelcomeScreen: JSX.Element;
@@ -50,9 +49,8 @@ const RootStackNavigator: FunctionComponent = ({}) => {
           name="HomeScreen"
           component={HomeScreen}
           options={{
-            headerTitle: () => <></>,
             headerLeft: () => (
-              <Greeting mainText={"Hola German"}  subText={"$gderbes 🍋"} />
+              <Greeting mainText={"Hola German"} subText={"$gderbes 🍋"} />
             ),
           }}
         />

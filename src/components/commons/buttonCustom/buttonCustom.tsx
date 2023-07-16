@@ -11,10 +11,15 @@ interface ButtonCustomProps {
   textStyles?: StyleProp<TextStyle>;
 }
 
-const ButtonCustom: FunctionComponent<ButtonCustomProps> = (props) => {
+const ButtonCustom: FunctionComponent<ButtonCustomProps> = ({
+  children,
+  onPress,
+  btnStyles,
+  textStyles,
+}) => {
   return (
-    <StyledButton onPress={props.onPress} style={props.btnStyles}>
-      <TextCustom textStyles={props.textStyles}>{props.children}</TextCustom>
+    <StyledButton onPress={onPress} style={btnStyles}>
+      <TextCustom textStyles={textStyles}>{children}</TextCustom>
     </StyledButton>
   );
 };

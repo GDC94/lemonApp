@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
-import { HomeContainer } from "./homeScreen.styles";
 import { StatusBar } from "expo-status-bar";
 import { CardListSection } from "../../components/cardListSection";
 import { data } from "../../data";
 import { ListCoins } from "../../components/ListCoins";
+import { HomeContainer } from "./homeScreen.styles";
 
 const HomeScreen: FunctionComponent = () => {
   return (

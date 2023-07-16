@@ -1,7 +1,7 @@
+import { FunctionComponent } from "react";
 import { StatusBar } from "expo-status-bar";
 import image from "../../assets/lemonCapture.png";
 import ButtonCustom from "../../components/commons/buttonCustom/buttonCustom";
-
 import {
   BottomSection,
   TopImage,
@@ -9,7 +9,7 @@ import {
   WelcomeContainer,
 } from "./welcomeScreen.styles";
 
-const WelcomeScreen = () => {
+const WelcomeScreen: FunctionComponent = () => {
   return (
     <>
       <StatusBar style="light" />

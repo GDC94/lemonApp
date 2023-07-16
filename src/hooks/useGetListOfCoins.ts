@@ -12,9 +12,7 @@ export const useGetListOfCoins = () => {
     setCoinsList(responseListCoins.data);
     setIsLoading(false);
   };
-
-  console.log(coinsList);
-
+  
   useEffect(() => {
     getCoins();
   }, []);
