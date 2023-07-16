@@ -1,1 +1,1 @@
-export {default as CoinItemCard} from './coinItemCard';
+export {default as CardItem} from './cardItem';

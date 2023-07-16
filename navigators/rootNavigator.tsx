@@ -21,7 +21,7 @@ const RootStackNavigator: FunctionComponent = ({}) => {
       <Stack.Navigator
         screenOptions={{
           headerStyle: {
-            backgroundColor: colors.background,
+            backgroundColor: colors.backgroundHome,
             borderBottomWidth: 0,
             shadowColor: "transparent",
             shadowOpacity: 0,
@@ -52,7 +52,7 @@ const RootStackNavigator: FunctionComponent = ({}) => {
           options={{
             headerTitle: () => <></>,
             headerLeft: () => (
-              <Greeting mainText={"Hola German"}  subText={"$gderbes"} />
+              <Greeting mainText={"Hola German"}  subText={"$gderbes 🍋"} />
             ),
           }}
         />
