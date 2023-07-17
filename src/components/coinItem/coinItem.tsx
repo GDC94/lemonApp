@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { useNavigation } from "@react-navigation/native";
 import { Coin } from "../../typings/coinGeckoResponses";
 import { Coin as CoinIcon } from "../../assets";
 import TextCustom from "../commons/text/TextCustom";
@@ -9,7 +10,7 @@ import {
   LogoCoin,
   NameSymbolContent,
 } from "./coinItem.styles";
-import { useNavigation } from "@react-navigation/native";
+
 
 interface CoinItemProps {
   coin: Coin;

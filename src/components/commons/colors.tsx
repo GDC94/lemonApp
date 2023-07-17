@@ -4,7 +4,8 @@ export const colors = {
     green:' #2bfd3c',
     white: '#ffffff',
     textGray: '#676d79',
-    primary: '#558EF3',
+    primary: '#55a4f3',
     gray: '#19202a',
     grayLight: '#273039',
+    favorite: '#ca0000',
 }

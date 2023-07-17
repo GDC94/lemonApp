@@ -9,12 +9,15 @@ import { ArrowDown, ArrowTop, Dollar, SwapIcon } from "../../assets";
 import {
   ButtonCoinAction,
   ButtonContent,
+  ButtonFavContent,
   CoinDetailsScreenContainer,
   IconButton,
   ImageContainer,
   InfoTokenContainer,
   LogoCoin,
 } from "./coinDetailsScreen.styles";
+import { ButtonFav } from "../../components/buttonFav";
+import { View } from "react-native";
 
 export interface CoinDetailsScreen
   extends StackScreenProps<RootStackParamsList, "CoinDetailsScreen"> {}
@@ -22,26 +25,26 @@ export interface CoinDetailsScreen
 interface IconButton {
   id: number;
   iconName: string;
+  action: string;
 }
 
 const arrOfIconsForButtons: IconButton[] = [
-  { iconName: ArrowTop, id: 1 },
-  { iconName: ArrowDown, id: 2 },
-  { iconName: Dollar, id: 3 },
-  { iconName: SwapIcon, id: 4 },
+  { iconName: ArrowTop, id: 1, action: "Depositar" },
+  { iconName: ArrowDown, id: 2, action: "Enviar" },
+  { iconName: Dollar, id: 3, action: "Compraventa" },
+  { iconName: SwapIcon, id: 4, action: "Cambiar" },
 ];
 
-const CoinDetailsScreen: FunctionComponent<CoinDetailsScreen> = ({
-  navigation,
-  route,
-}) => {
+const CoinDetailsScreen: FunctionComponent<CoinDetailsScreen> = ({ route }) => {
   const { coin } = route.params;
-
 
   const { coinDetails } = useGetDetailsOfCoins(coin);
 
   return (
     <CoinDetailsScreenContainer>
+      <ButtonFavContent>
+        <ButtonFav coin={coin} />
+      </ButtonFavContent>
       <ImageContainer>
         <LogoCoin source={{ uri: coinDetails?.image?.large }} />
         <TextCustom
@@ -69,11 +72,23 @@ const CoinDetailsScreen: FunctionComponent<CoinDetailsScreen> = ({
       </ImageContainer>
       <InfoTokenContainer>
         <ButtonContent>
-          {arrOfIconsForButtons?.map(({ iconName, id }) => {
+          {arrOfIconsForButtons?.map(({ iconName, id, action }) => {
             return (
-              <ButtonCoinAction key={id}>
-                <IconButton source={iconName} />
-              </ButtonCoinAction>
+              <View style={{ alignItems: "center", gap: 4 }}>
+                <ButtonCoinAction key={id}>
+                  <IconButton source={iconName} />
+                </ButtonCoinAction>
+
+                <TextCustom
+                  textStyles={{
+                    color: colors.primary,
+                    fontSize: 14,
+                    fontWeight: "700",
+                  }}
+                >
+                  {action}
+                </TextCustom>
+              </View>
             );
           })}
         </ButtonContent>

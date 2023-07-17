@@ -5,7 +5,7 @@ import { colors } from "../../components/commons/colors";
 export const CoinDetailsScreenContainer = styled(Container)``;
 
 export const ImageContainer = styled.View`
-  flex: 2;
+  flex: 3;
   background-color: ${colors.backgroundHome};
   width: 100%;
   align-items: center;
@@ -34,7 +34,7 @@ export const ButtonContent = styled.View`
 export const ButtonCoinAction = styled.View`
   width: 50px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 16px;
   background-color: ${colors.primary};
   align-items: center;
   justify-content: center;
@@ -43,4 +43,12 @@ export const ButtonCoinAction = styled.View`
 export const IconButton = styled.Image`
   height: 30px;
   width: 30px;
+`;
+
+
+export const ButtonFavContent = styled.View`
+  width: 100% ;
+  height: 60px ;
+  background-color: ${colors.backgroundHome} ;
+  padding-left: 30px ;
 `;
