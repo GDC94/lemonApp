@@ -1,9 +1,9 @@
-import RootStackNavigator from "./navigators/rootNavigator";
 import {
   useFonts,
   Nunito_400Regular,
   Nunito_700Bold,
 } from "@expo-google-fonts/nunito";
+import RootStackNavigator from "./src/navigators/rootNavigator";
 
 const App = () => {
   const [fontsLoaded] = useFonts({

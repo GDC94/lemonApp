@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import CardItem, { CardItemProps } from "../coinItemCard/cardItem";
+import CardItem, { CardItemProps } from "../cardItem/cardItem";
 import { FlatListCustom } from "./cardListSection.styles";
 
 interface CardListSectionProps {

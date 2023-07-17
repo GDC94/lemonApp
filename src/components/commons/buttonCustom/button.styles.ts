@@ -6,5 +6,5 @@ export const StyledButton = styled.TouchableOpacity`
   background-color: ${colors.primary};
   width: 100%;
   padding: 10px;
-  border-radius: 100px;
+  
 `;

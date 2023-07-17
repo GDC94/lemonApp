@@ -3,8 +3,8 @@ import { colors } from "../../commons/colors";
 
 export const StyledView = styled.TouchableOpacity`
   flex-direction: column;
-  height: 65px;
-  width: 65px;
+  height: 55px;
+  width: 55px;
   border-radius: 16px;
   border: 4px solid ${colors.gray};
 `;

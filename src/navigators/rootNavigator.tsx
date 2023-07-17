@@ -1,11 +1,11 @@
 import { FunctionComponent } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { WelcomeScreen } from "../src/screens/welcomeScreen";
-import { HomeScreen } from "../src/screens/homeScreen";
-import { colors } from "../src/components/commons/colors";
-import { Greeting, Profile } from "../src/components/header";
-import lemmy from "../src/assets/lemmy.png";
+import { WelcomeScreen } from "../screens/welcomeScreen";
+import { HomeScreen } from "../screens/homeScreen";
+import { colors } from "../components/commons/colors";
+import { Greeting, Profile } from "../components/header";
+import lemmy from "../assets/lemmy.png";
 
 type RootStackParamsList = {
   WelcomeScreen: JSX.Element;
@@ -49,6 +49,7 @@ const RootStackNavigator: FunctionComponent = ({}) => {
           name="HomeScreen"
           component={HomeScreen}
           options={{
+            headerTitle: () => <></>,
             headerLeft: () => (
               <Greeting mainText={"Hola German"} subText={"$gderbes 🍋"} />
             ),

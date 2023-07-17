@@ -3,7 +3,8 @@ export const colors = {
     backgroundHome: '#0b0e15',
     green:' #2bfd3c',
     white: '#ffffff',
-    textGray: '#9ab0db',
+    textGray: '#676d79',
     primary: '#558EF3',
-    gray: '#1b222c'
+    gray: '#19202a',
+    grayLight: '#273039',
 }

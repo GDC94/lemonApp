@@ -4,13 +4,15 @@ import { CardListSection } from "../../components/cardListSection";
 import { data } from "../../data";
 import { ListCoins } from "../../components/ListCoins";
 import { HomeContainer } from "./homeScreen.styles";
+import { useGetListOfCoins } from "../../hooks/useGetListOfCoins";
 
 const HomeScreen: FunctionComponent = () => {
+  const { listOfCoins } = useGetListOfCoins();
   return (
     <HomeContainer>
       <StatusBar style="light" />
       <CardListSection arrOfCards={data} />
-      <ListCoins />
+      <ListCoins arrOfCoins={listOfCoins}  />
     </HomeContainer>
   );
 };
