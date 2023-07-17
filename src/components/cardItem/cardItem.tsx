@@ -61,12 +61,10 @@ const CardItem: FunctionComponent<CardItemProps> = ({
                 {title}
               </TextCustom>
             </View>
-
             <WrapperLogo>
               <Logo source={logo} />
             </WrapperLogo>
           </CardRow>
-
           <CardRowMiddle>
             <LogoArg source={logoArg} />
             <View

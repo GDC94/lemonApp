@@ -8,11 +8,12 @@ import { useGetListOfCoins } from "../../hooks/useGetListOfCoins";
 
 const HomeScreen: FunctionComponent = () => {
   const { listOfCoins } = useGetListOfCoins();
+
   return (
     <HomeContainer>
       <StatusBar style="light" />
       <CardListSection arrOfCards={data} />
-      <ListCoins arrOfCoins={listOfCoins}  />
+      <ListCoins arrOfCoins={listOfCoins} />
     </HomeContainer>
   );
 };

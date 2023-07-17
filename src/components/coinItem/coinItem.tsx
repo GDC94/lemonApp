@@ -9,14 +9,19 @@ import {
   LogoCoin,
   NameSymbolContent,
 } from "./coinItem.styles";
+import { useNavigation } from "@react-navigation/native";
 
 interface CoinItemProps {
   coin: Coin;
 }
 
 const CoinItem: FunctionComponent<CoinItemProps> = ({ coin }) => {
+  const navigation = useNavigation();
+
   return (
-    <CoinItemView>
+    <CoinItemView
+      onPress={() => navigation.navigate("CoinDetailsScreen", { coin: coin })}
+    >
       <CoinLogoContent>
         <LogoCoin source={CoinIcon} />
       </CoinLogoContent>
@@ -36,9 +41,16 @@ const CoinItem: FunctionComponent<CoinItemProps> = ({ coin }) => {
           </TextCustom>
 
           <TextCustom
-            textStyles={{ color: "#ffffff", fontSize: 20, fontWeight: "600" }}
+            textStyles={{
+              color: "#ffffff",
+              fontSize: 20,
+              fontWeight: "600",
+              marginRight: 6,
+            }}
           >
-            {coin?.name}
+            {`${coin?.name?.slice(0, 18)}${
+              coin?.name?.length > 18 ? "..." : ""
+            }`}
           </TextCustom>
         </CoinInfoContent>
         <CoinInfoContent>
@@ -54,9 +66,16 @@ const CoinItem: FunctionComponent<CoinItemProps> = ({ coin }) => {
           </TextCustom>
 
           <TextCustom
-            textStyles={{ color: "#ffffff", fontSize: 20, fontWeight: "600" }}
+            textStyles={{
+              color: "#ffffff",
+              fontSize: 20,
+              fontWeight: "600",
+              marginRight: 6,
+            }}
           >
-            {coin?.symbol}
+            {`${coin?.symbol?.slice(0, 18)}${
+              coin?.symbol?.length > 18 ? "..." : ""
+            }`}
           </TextCustom>
         </CoinInfoContent>
       </NameSymbolContent>

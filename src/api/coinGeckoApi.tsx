@@ -9,5 +9,12 @@ export const coinGeckoApiMOCK = axios.create({
 });
 
 
+export const coinGeckoApiDetails = axios.create({
+  baseURL: "https://run.mocky.io/v3/fdb849d6-9dbf-4619-9b80-ea9ae4815d53",
+});
+
+
+
+
 
 

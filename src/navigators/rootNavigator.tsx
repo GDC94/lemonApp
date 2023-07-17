@@ -6,10 +6,13 @@ import { HomeScreen } from "../screens/homeScreen";
 import { colors } from "../components/commons/colors";
 import { Greeting, Profile } from "../components/header";
 import lemmy from "../assets/lemmy.png";
+import { Coin } from "../typings/coinGeckoResponses";
+import { CoinDetailsScreen } from "../screens/coinDetails";
 
-type RootStackParamsList = {
+export type RootStackParamsList = {
   WelcomeScreen: JSX.Element;
   HomeScreen: JSX.Element;
+  CoinDetailsScreen: { coin: Coin };
 };
 
 const Stack = createStackNavigator<RootStackParamsList>();
@@ -55,6 +58,8 @@ const RootStackNavigator: FunctionComponent = ({}) => {
             ),
           }}
         />
+
+        <Stack.Screen name="CoinDetailsScreen" component={CoinDetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
