@@ -4,8 +4,8 @@
 ## 🕺 Cómo levantar el proyecto
 
 ## 📲 Screens
+<img src="[ruta_de_la_imagen.png](https://github.com/GDC94/lemonApp/assets/70720945/f4fb39a0-7b34-4ec9-8e43-0ffe1cfcc0ae)" alt="Descripción de la imagen" width="300px">
 
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 17 01 28](https://github.com/GDC94/lemonApp/assets/70720945/f4fb39a0-7b34-4ec9-8e43-0ffe1cfcc0ae)
 
 ![Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 11 48 31](https://github.com/GDC94/lemonApp/assets/70720945/8d8767d4-8836-4100-974e-27ec1cc97e1c)
 
