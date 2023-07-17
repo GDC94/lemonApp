@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { WelcomeScreen } from "../screens/welcomeScreen";
 import { HomeScreen } from "../screens/homeScreen";
@@ -20,7 +20,6 @@ export type RootStackParamsList = {
 const Stack = createStackNavigator<RootStackParamsList>();
 
 const RootStackNavigator: FunctionComponent = ({}) => {
-  const navigation = useNavigation();
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -43,7 +42,7 @@ const RootStackNavigator: FunctionComponent = ({}) => {
             <Profile
               imageSource={lemmy}
               imgStyle={undefined}
-              onPress={() => navigation.navigate("LemonCardScreen")}
+    
             />
           ),
         }}

@@ -8,4 +8,5 @@ export const colors = {
     gray: '#19202a',
     grayLight: '#273039',
     favorite: '#ca0000',
+    textProp: '#96B0DB'
 }

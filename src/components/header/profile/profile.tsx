@@ -1,25 +1,20 @@
 import React, { FunctionComponent } from "react";
 import { ProfileImage, StyledView } from "./profile.styles";
-import {
-  GestureResponderEvent,
-  ImageSourcePropType,
-  ImageStyle,
-  StyleProp,
-} from "react-native";
+import { ImageSourcePropType, ImageStyle, StyleProp } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 interface ProfileProps {
   imageSource: ImageSourcePropType;
   imgStyle: StyleProp<ImageStyle>;
-  onPress?: ((event: GestureResponderEvent) => void) | undefined;
 }
 
 const Profile: FunctionComponent<ProfileProps> = ({
   imageSource,
   imgStyle,
-  onPress,
 }) => {
+  const navigation = useNavigation();
   return (
-    <StyledView onPress={onPress}>
+    <StyledView onPress={() => navigation.navigate("LemonCardScreen")}>
       <ProfileImage source={imageSource} style={imgStyle} resizeMode="cover" />
     </StyledView>
   );
