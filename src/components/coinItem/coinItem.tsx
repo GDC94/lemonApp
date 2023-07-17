@@ -11,7 +11,6 @@ import {
   NameSymbolContent,
 } from "./coinItem.styles";
 
-
 interface CoinItemProps {
   coin: Coin;
 }

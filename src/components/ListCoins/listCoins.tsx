@@ -1,9 +1,9 @@
 import { FunctionComponent } from "react";
-import { CoinsListScroll, ListCoinsSection } from "./listCoins.styles";
 import { SearchBar } from "../searchBar";
 import { Coin } from "../../typings/coinGeckoResponses";
 import { FlatList } from "react-native";
 import { CoinItem } from "../coinItem";
+import { CoinsListScroll, ListCoinsSection } from "./listCoins.styles";
 
 interface ListCoinsProps {
   arrOfCoins: Coin[];

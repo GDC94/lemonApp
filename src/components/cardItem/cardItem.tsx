@@ -31,7 +31,6 @@ export interface CardItemProps {
 }
 
 const CardItem: FunctionComponent<CardItemProps> = ({
-  id,
   title,
   logo,
   imageBackgorund,
@@ -44,10 +43,9 @@ const CardItem: FunctionComponent<CardItemProps> = ({
   logoCoin,
   balanceCoin,
 }) => {
-  const handlePress = () => {};
   return (
     <CardBackground source={imageBackgorund}>
-      <CardTouchable underlayColor={colors.green} onPress={handlePress}>
+      <CardTouchable underlayColor={colors.green}>
         <CardView>
           <CardRow>
             <View style={{ flex: 3 }}>

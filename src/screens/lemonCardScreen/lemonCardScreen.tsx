@@ -1,4 +1,9 @@
 import { FunctionComponent } from "react";
+import { StackScreenProps } from "@react-navigation/stack";
+import { RootStackParamsList } from "../../navigators/rootNavigator";
+import { LemmyImage } from "../../assets";
+import TextCustom from "../../components/commons/text/TextCustom";
+import { colors } from "../../components/commons/colors";
 import {
   Lemmy,
   LemmyContent,
@@ -6,11 +11,6 @@ import {
   PersonalContent,
   PropertiesCard,
 } from "./lemonCardScreen.styles";
-import { StackScreenProps } from "@react-navigation/stack";
-import { RootStackParamsList } from "../../navigators/rootNavigator";
-import { LemmyImage } from "../../assets";
-import TextCustom from "../../components/commons/text/TextCustom";
-import { colors } from "../../components/commons/colors";
 
 export interface LemonCardScreen
   extends StackScreenProps<RootStackParamsList, "LemonCardScreen"> {}

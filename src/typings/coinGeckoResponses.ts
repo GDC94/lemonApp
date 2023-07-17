@@ -161,7 +161,6 @@ export enum ID {
   Litecoin = "litecoin",
 }
 
-
 export interface CoinDetailLinks {
   homepage: string[];
   blockchainSite: string[];

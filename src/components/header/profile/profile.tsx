@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from "react";
-import { ProfileImage, StyledView } from "./profile.styles";
 import { ImageSourcePropType, ImageStyle, StyleProp } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+
+import { ProfileImage, StyledView } from "./profile.styles";
 
 interface ProfileProps {
   imageSource: ImageSourcePropType;

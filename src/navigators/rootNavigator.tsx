@@ -8,7 +8,7 @@ import { Greeting, Profile } from "../components/header";
 import lemmy from "../assets/lemmy.png";
 import { Coin } from "../typings/coinGeckoResponses";
 import { CoinDetailsScreen } from "../screens/coinDetails";
-import LemonCardScreen from "../screens/lemonCardScreen/lemonCardScreen";
+import { LemonCardScreen } from "../screens/lemonCardScreen";
 
 export type RootStackParamsList = {
   WelcomeScreen: JSX.Element;
@@ -39,11 +39,7 @@ const RootStackNavigator: FunctionComponent = ({}) => {
             paddingLeft: 25,
           },
           headerRight: () => (
-            <Profile
-              imageSource={lemmy}
-              imgStyle={undefined}
-    
-            />
+            <Profile imageSource={lemmy} imgStyle={undefined} />
           ),
         }}
         initialRouteName="HomeScreen"

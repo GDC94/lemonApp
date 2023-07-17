@@ -5,7 +5,8 @@ import { useGetDetailsOfCoins } from "../../hooks/useGetDetailsOfCoin";
 import TextCustom from "../../components/commons/text/TextCustom";
 import { colors } from "../../components/commons/colors";
 import { ArrowDown, ArrowTop, Dollar, SwapIcon } from "../../assets";
-
+import { ButtonFav } from "../../components/buttonFav";
+import { View } from "react-native";
 import {
   ButtonCoinAction,
   ButtonContent,
@@ -16,8 +17,6 @@ import {
   InfoTokenContainer,
   LogoCoin,
 } from "./coinDetailsScreen.styles";
-import { ButtonFav } from "../../components/buttonFav";
-import { View } from "react-native";
 
 export interface CoinDetailsScreen
   extends StackScreenProps<RootStackParamsList, "CoinDetailsScreen"> {}

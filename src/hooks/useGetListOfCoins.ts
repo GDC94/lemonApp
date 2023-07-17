@@ -8,7 +8,7 @@ export const useGetListOfCoins = () => {
 
   const LIST_OF_COINS = "";
   const getCoins = async () => {
-    const responseListCoins = await coinGeckoApiMOCK.get<Coin[]>('');
+    const responseListCoins = await coinGeckoApiMOCK.get<Coin[]>("");
     setCoinsList(responseListCoins?.data);
     setIsLoading(false);
   };

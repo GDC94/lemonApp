@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { GreetingContainer } from "./greeting.styles";
 import TextCustom from "../../commons/text/TextCustom";
 import { colors } from "../../commons/colors";
+import { GreetingContainer } from "./greeting.styles";
 
 interface GreetingProps {
   mainText: string;

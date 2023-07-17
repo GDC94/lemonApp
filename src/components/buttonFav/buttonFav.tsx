@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
+import TextCustom from "../commons/text/TextCustom";
+import { colors } from "../commons/colors";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Coin } from "../../typings/coinGeckoResponses";
 import { StyledFavoriteButton } from "./buttonFav.styles";
-import TextCustom from "../commons/text/TextCustom";
-import { colors } from "../commons/colors";
 
 interface ButtonFavProps {
   coin: Coin;
