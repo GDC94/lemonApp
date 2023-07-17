@@ -4,6 +4,12 @@ import { colors } from "../../components/commons/colors";
 
 export const CoinDetailsScreenContainer = styled(Container)``;
 
+export const CoinDetailsLoadingContainer = styled(Container)`
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.backgroundHome};
+`;
+
 export const ImageContainer = styled.View`
   flex: 3;
   background-color: ${colors.backgroundHome};
@@ -45,10 +51,9 @@ export const IconButton = styled.Image`
   width: 30px;
 `;
 
-
 export const ButtonFavContent = styled.View`
-  width: 100% ;
-  height: 60px ;
-  background-color: ${colors.backgroundHome} ;
-  padding-left: 30px ;
+  width: 100%;
+  height: 60px;
+  background-color: ${colors.backgroundHome};
+  padding-left: 30px;
 `;

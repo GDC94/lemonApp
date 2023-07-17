@@ -4,13 +4,16 @@ import { StackScreenProps } from "@react-navigation/stack";
 import { useGetDetailsOfCoins } from "../../hooks/useGetDetailsOfCoin";
 import TextCustom from "../../components/commons/text/TextCustom";
 import { colors } from "../../components/commons/colors";
-import { ArrowDown, ArrowTop, Dollar, SwapIcon } from "../../assets";
+import { ArrowDown, ArrowTop, Dollar, Lemon, SwapIcon } from "../../assets";
 import { ButtonFav } from "../../components/buttonFav";
 import { View } from "react-native";
+import { LemonLoad } from "../../components/ListCoins/listCoins.styles";
+
 import {
   ButtonCoinAction,
   ButtonContent,
   ButtonFavContent,
+  CoinDetailsLoadingContainer,
   CoinDetailsScreenContainer,
   IconButton,
   ImageContainer,
@@ -37,7 +40,25 @@ const arrOfIconsForButtons: IconButton[] = [
 const CoinDetailsScreen: FunctionComponent<CoinDetailsScreen> = ({ route }) => {
   const { coin } = route.params;
 
-  const { coinDetails } = useGetDetailsOfCoins(coin);
+  const { coinDetails, isLoading } = useGetDetailsOfCoins(coin);
+
+  if (isLoading) {
+    return (
+      <CoinDetailsLoadingContainer>
+        <LemonLoad source={Lemon} />
+        <TextCustom
+          textStyles={{
+            color: colors.textProp,
+            fontSize: 14,
+            marginTop: 10,
+            fontWeight: "700",
+          }}
+        >
+          Cargando...
+        </TextCustom>
+      </CoinDetailsLoadingContainer>
+    );
+  }
 
   return (
     <CoinDetailsScreenContainer>
