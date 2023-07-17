@@ -59,7 +59,11 @@ const RootStackNavigator: FunctionComponent = ({}) => {
           }}
         />
 
-        <Stack.Screen name="CoinDetailsScreen" component={CoinDetailsScreen} />
+        <Stack.Screen
+          name="CoinDetailsScreen"
+          component={CoinDetailsScreen}
+          options={{ headerTitle: () => <></> }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
