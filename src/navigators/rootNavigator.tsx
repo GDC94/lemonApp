@@ -12,7 +12,7 @@ import { LemonCardScreen } from "../screens/lemonCardScreen";
 
 export type RootStackParamsList = {
   WelcomeScreen: JSX.Element;
-  HomeScreen: JSX.Element;
+  HomeScreen: undefined;
   CoinDetailsScreen: { coin: Coin };
   LemonCardScreen: undefined;
 };
@@ -42,7 +42,7 @@ const RootStackNavigator: FunctionComponent = ({}) => {
             <Profile imageSource={lemmy} imgStyle={undefined} />
           ),
         }}
-        initialRouteName="HomeScreen"
+        initialRouteName="WelcomeScreen"
       >
         <Stack.Screen
           name="WelcomeScreen"

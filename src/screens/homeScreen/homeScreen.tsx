@@ -4,16 +4,23 @@ import { CardListSection } from "../../components/cardListSection";
 import { data } from "../../data";
 import { ListCoins } from "../../components/ListCoins";
 import { HomeContainer } from "./homeScreen.styles";
-import { useGetListOfCoins } from "../../hooks/useGetListOfCoins";
+import { StackScreenProps } from "@react-navigation/stack";
+import { RootStackParamsList } from "../../navigators/rootNavigator";
 
-const HomeScreen: FunctionComponent = () => {
-  const { listOfCoins } = useGetListOfCoins();
+
+export interface HomeScreenProps
+  extends StackScreenProps<RootStackParamsList, "HomeScreen"> {}
+
+const HomeScreen: FunctionComponent<HomeScreenProps> = () => {
+
 
   return (
     <HomeContainer>
       <StatusBar style="light" />
       <CardListSection arrOfCards={data} />
-      <ListCoins arrOfCoins={listOfCoins} />
+      <ListCoins/>
+
+     
     </HomeContainer>
   );
 };

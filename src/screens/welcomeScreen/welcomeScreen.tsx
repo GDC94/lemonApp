@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import image from "../../assets/lemonCapture.png";
 import ButtonCustom from "../../components/commons/buttonCustom/buttonCustom";
@@ -10,6 +11,7 @@ import {
 } from "./welcomeScreen.styles";
 
 const WelcomeScreen: FunctionComponent = () => {
+  const navigation = useNavigation();
   return (
     <>
       <StatusBar style="light" />
@@ -27,7 +29,9 @@ const WelcomeScreen: FunctionComponent = () => {
             }}
             btnStyles={{
               marginBottom: 50,
+              borderRadius: 30,
             }}
+            onPress={() => navigation.navigate("HomeScreen")}
           >
             ¡Empecemos!
           </ButtonCustom>
